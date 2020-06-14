@@ -41,6 +41,7 @@ RUN apt-get -qq update \
     && update-alternatives --install /usr/bin/c++ c++ /usr/bin/g++-10 100 \
     && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 \
     && update-alternatives --install /usr/bin/cc cc /usr/bin/gcc-10 100 \
+    && update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 100 \
     && ln -s /usr/include/locale.h /usr/include/xlocale.h \
     && rm -rf /var/lib/apt/lists/* \
     && wget --no-check-certificate --quiet https://cmake.org/files/v3.17/cmake-3.17.3-Linux-x86_64.tar.gz \
